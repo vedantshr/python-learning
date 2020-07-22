@@ -4,16 +4,16 @@ if __name__ == "__main__":
         print(" "*((inp-i)//2), "*"*i, "\n")
 
 #Fibonacci Sequence
-    ip = int(input())
-    x = 0
-    y = 1
+    # ip = int(input())
+    # x = 0
+    # y = 1
    
-    print(x,"\n",y)
-    for s in range(2,ip):
-        s = x + y 
-        print("\n",s)
-        x = y
-        y = s
+    # print(x,"\n",y)
+    # for s in range(2,ip):
+    #     s = x + y 
+    #     print("\n",s)
+    #     x = y
+    #     y = s
             
     print("Choose from the following figures : ", "\n","square \trectangle\ttriangle\tcircle")
     ip = str(input())
