@@ -1,0 +1,10 @@
+DAY1:	Basics of programming. 17/7
+DAY2:	Variables, Conditionals, Looping. 19/7
+DAY3:	Functions, Inbuilt Functions, Github. 22/7
+DAY4:	File I/O, CSV, Exception handling. 25/7
+DAY5:	Classes in detail.  29/7
+DAY6:	Module Development, Numpy, Scipy.	1/8
+DAY7:	APIs, Python for servers.	5/8
+DAY8:	Tkinter and GUI programming.	8/8
+DAY9:	Introduction to Web development basics. 10/8
+DAY10:	Developing an application with Django	13/8

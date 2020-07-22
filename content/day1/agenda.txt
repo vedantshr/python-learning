@@ -1,0 +1,9 @@
+AGENDA:
+
+1. Syllabus timeline.
+2. Basics of compilation process. Sequential execution.
+3. Difference between Python and C.
+4. What is command line.
+5. Basics of UNIX commands.
+6. I/O in Python. __main__ in Python.
+7. Logic based problem statements without code.

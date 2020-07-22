@@ -1,0 +1,1 @@
+Source code -> Object File + [Runtime libraries] -> Linker -> Executable

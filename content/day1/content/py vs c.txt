@@ -1,0 +1,13 @@
+Variables are declared in C.					Variables are declared in C++		Python has no declaration.
+
+C is a compiled language.					C++ is a compiled language.		Python is an interpreted language.
+
+C contains 32 keywords.						C++ contains 52 keywords.		Python contains 33 keywords.
+
+C supports procedural programming.				C++ supports both procedural and object oriented programming paradigms.			Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming.
+
+C does not support inheritance.			C++ support both single and multiple inheritance	Python supports all 5 types of inheritance i.e. single inheritance, multiple inheritance, multilevel inheritance, hierarchical inheritance, and hybrid inheritance
+
+C provides malloc() and calloc() functions for dynamic memory allocation, and free() for memory de-allocation.			C++ provides new operator for memory allocation and delete operator for memory de-allocation.			Python’s memory allocation and deallocation method is automatic.
+
+Direct support for exception handling is not supported by C.		Exception handling is supported by C++.			Exception handling is supported by Python.

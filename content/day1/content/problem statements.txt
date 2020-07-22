@@ -1,0 +1,4 @@
+1. Suppose you’re on a game show, and you’re given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what’s behind the doors, opens another door, say No. 3, which has a goat. He then says to you, “Do you want to pick door No. 2?” Is it to your advantage to switch your choice?
+2. You are provided with 8 identical balls and a measuring instrument. 7 of the eight balls are equal in weight and one of the eight given balls is defective and weighs less. The task is to find the defective ball in exactly two measurements.
+3. Odd Even numbers.
+4. Prime numbers.

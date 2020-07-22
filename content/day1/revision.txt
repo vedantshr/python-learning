@@ -1,0 +1,11 @@
+1. Basics of compilation process.
+
+2. Difference b/w compiler and interpreter.
+
+3. How does a C code works?
+
+4. What are header files/modules?
+
+5. What are functions? Decleration, Definition and Calling of a function.
+
+6. Basics of types of variables (in C/Python)

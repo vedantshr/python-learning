@@ -1,0 +1,24 @@
+1. Sort.
+2. Fibonacci.
+3. Lexicographically longest string.
+4. Program to print
+	*
+	**
+	***
+	****
+	...
+
+for a given n, where n=number of lines
+5. Program to print
+	... 
+	*****
+	 ***
+	  *
+for a give n, where n=number of lines
+6. Program to print formula for area or perimeter of a given figure(in input)
+figures could be triangle, square, rectangle, circle and is given as user input. Second line of input contains whether the user wants the area of the volume.
+Sample input:
+square
+area
+Sample output:
+side*sid

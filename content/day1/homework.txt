@@ -1,0 +1,9 @@
+1. Python variables.
+2. Factorial.
+3. Lexicographically longest string.
+4. Count total number of 1s in a set of 0s.
+5. Length of a word.
+6. Sort.
+7. Fibonacci.
+8. Armstrongs number.
+9. Reverse a word.

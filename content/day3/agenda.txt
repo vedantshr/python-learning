@@ -1,0 +1,6 @@
+1. What is Github?
+2. Basic github commands.
+3. Functions in Python.
+4. Inbuilt Functions.
+5. Recursion.
+6. Problem sttements.

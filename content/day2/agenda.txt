@@ -1,0 +1,5 @@
+1. Types of variables in Python.
+2. Mutable vs Immutable. Multiple Assignment to variables
+3. If else statements. Nested If.
+4. Loops
+5. Programming problem statements.

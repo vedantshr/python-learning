@@ -1,0 +1,7 @@
+1. Create a list of dictionaries ({str:int}) and find sort acc to value of dict.
+2. Take a list of ints, create another list of same length having 0s and 1s. Put 0 if the number at the corresponding position in the original list is prime, otherwise put 1. Continue for each element in the original list.
+3. Function to return number of vowels in the string. (**explain usage of "in" operator)
+4. create a function to remove all duplicate letters from a string.
+5. Program to convert 12 hr format to 24 hr.
+6. Sort function
+7. Rotate list by n number of positions left or right.

@@ -1,0 +1,4 @@
+1. Factorial.
+2. Count total number of 1s in a set of 0s.
+3. Armstrongs number.
+4. Reverse a word.
