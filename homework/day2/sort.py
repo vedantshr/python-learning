@@ -1,9 +1,10 @@
 if __name__ == "__main__":
     l = list(map(int, input().split(" ")))
     l1 = list()
-    minm = l[0]
+    
     x = len(l)
     for i in range(x):
+        minm = l[0]
         for j in range(len(l)):
             if minm > l[j]:
                 minm = l[j]
