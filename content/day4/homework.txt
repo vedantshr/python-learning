@@ -1,0 +1,16 @@
+﻿https://www.hackerrank.com/challenges/python-loops/problem
+
+
+https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem
+
+
+https://www.hackerrank.com/challenges/nested-list/problem
+
+
+https://www.hackerrank.com/challenges/find-a-string/problem
+
+
+https://www.hackerrank.com/challenges/exceptions/problem
+
+
+https://www.hackerrank.com/challenges/python-lists/problem
