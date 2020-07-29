@@ -1,0 +1,4 @@
+1. Encapsulation (__private())
+2. Abstraction
+3. Inheritace
+4. Polymorphism

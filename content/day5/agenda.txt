@@ -1,0 +1,4 @@
+1. 4 principles of OOPS.
+2. what are objects?
+3. classes.
+4. inhertence implementation.
