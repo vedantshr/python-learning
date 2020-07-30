@@ -1,2 +1,2 @@
 ip = input()
-print(type(ip)
+print(type(ip))
