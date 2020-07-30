@@ -6,3 +6,5 @@ if __name__ == "__main__":
         if l1 in l:
             x = x + 1
     print(x)
+
+    #incomplete
