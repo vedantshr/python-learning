@@ -1,0 +1,45 @@
+Create a class Product with attributes pID (string, case insensitive, check out lower() function for making pIDs caseinsensitive), pCostPrice(float), pSellingPrice (float), pProfitMargin (float, default=0.0).
+
+Product class should have a method setProfit which calculates the pProfitMargin as the difference between pSellingPrice and pCostPrice divided by pCostPrice multiplied by 100. The function returns nothing and only sets the value for pProfitMargin for the class. The pProfitMargin attribute value calculated in this function should be rounded off to 2 decimal places (use round(a,b) function for this. a->value to be rounded off, b->number of decimal places).
+
+Create a class Store with attributes storeName (string, default = "SSM Pvt. Ltd."), productList (list of Product objects), activeProducts(list of Product Objects, default=[]).
+
+Store class has 2 methods.
+
+1. setProduct accepts activeIDs (list of pIDs) for which pProfitMargin has to be calculated and should be appended to the activeProducts list.
+Call the method setProfit of class Product to set pProfitMargin for each object in the list and keep on appending them to the activeProducts list(attribute) of class Store. The function should return the activeProducts list.
+
+2. topProduct accepts no argument and returns the Product object with the maximum pProfitMargin from the activeProducts list of class Store (return None if no products in activeProducts list).
+
+
+For main:
+
+Accept inputs, call both function and print the pID and pSellingPrice (new line for every object, see Sample Output for better uderstanding) for the objects returned by first function. For second function, print pID and pProfitMargin of the returned object.
+
+
+Sample Inputs:
+First line contains number of products to be entered. Then in pair of 3 contains product details in order pID, pCostPrice, pSellingPrice.
+Last line contains space seperated values of pID for passing in the setProduct method of class Store. ( For reading this line as a list of strings, use, activeIds = list(map(str, input().split(" ")))
+
+4
+flour
+17
+22
+brush
+4
+6
+PulSes
+20
+28
+soap
+7
+12
+flour pulses soap
+
+
+Sample Output:
+
+flour 22.0
+pulses 28.0
+soap 12.0
+soap 71.43

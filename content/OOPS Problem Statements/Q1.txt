@@ -1,0 +1,57 @@
+Create an Employee Salary mgmt system
+
+1. Create a class EMployee with the following attributes, empId (int), empName(string), empDomain(string , only "IT" and "HR"), empWorkHours(float), empSalary(float, default=0.0)
+
+2. Create another class Salary with attributes, companyName(string, default="TCS"), empList (list if employee objects )
+
+Salary class should have 2 methods,
+
+i) setSalary which should accept empSalId (integer), representing empId. This function should set the value of empSalary for the employee with matching id.
+
+Salary is calculated as: For IT domain, fixed salary is 20000 and for HR domain fixedd salary is 14000.
+Over the fixed salary, employees are paid according to the work hours. For each hour they are paid 500.
+
+The function should return the object for employee whose salary has been calculated. Return None if employee not found
+
+ii) deleteEmployee, should accept an integer representing delEmpId. The employee object matching this empId should be removed form the list of employee objects (empList).
+
+function should return a dictionary with key as empId and value as empName for the employee removed. If no employee found for given id then function should return None.
+
+
+For main function:
+
+take inputs, create objects and call both functions.
+print result of the first function attribute wise
+(Eg. 
+11
+Aditya
+IT
+23
+31500
+), print None if not found.
+Result of next function should be returned as
+(Eg. {22:Diksha} ), print None if not found.
+
+
+Sample Input:
+
+first line contains number of employees to be added
+next lines in pair of 4 contain each employee's details in the order -> empId, empName, empDomain, empWorkHours
+next comes the employee id for which salary has to be calculated
+last line contains id of employee to be removed
+
+3
+11
+Aditya
+IT
+23
+22
+Diksha
+IT
+28
+33
+Garvit
+HR
+13
+22
+33
