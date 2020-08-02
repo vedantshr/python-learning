@@ -10,6 +10,7 @@ class Salary:
     def __init__(self, companyName, empList):
         self.companyName = TCS
         self.empList = empList
+        
 if __name__ == "__main__":
     NumberOfEmployees = int(input())
     empList = []

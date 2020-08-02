@@ -1,34 +1,57 @@
 class Product:
     def __init__(self, pID, pCostPrice, pSellingPrice, pProfitMargin):
-        self.pID = pID
+        self.pID = pID.lower()
         self.pCostPrice = pCostPrice
         self.pSellingPrice = pSellingPrice
         self.pProfitMargin = pProfitMargin
-    # def setProfit(self):
-    #     pProfitMargin = float(((pSellingPrice-pCostPrice)/pCostPrice)*100)
-    #     profitmargin = round(pProfitMargin,2)
+
+    def setProfit(self):
+        self.pProfitMargin = ((self.pSellingPrice-self.pCostPrice)/self.pCostPrice)*100
+
 class Store:
-    def __init__(self, storeName, productlist, activeproducts):
+    def __init__(self, storeName, productList, activeProducts):
         self.storeName = storeName
-        self.productlist = productlist
-        self.activeproducts = activeproducts
+        self.productList = productList
+        self.activeProducts = activeProducts
+
+    def setProduct(self, activeIDs):
+        for productID in activeIDs:
+            for productObj in self.productList:
+                if productID == productObj.pID:
+                    productObj.setProfit()
+                    self.activeProducts.append(productObj)
+                    break
+        return self.activeProducts
+
+    def topProduct(self):
+        maximumProfit = 0
+        maxObj = None
+        for actProduct in self.activeProducts:
+            if maximumProfit < actProduct.pProfitMargin:
+                maximumProfit = actProduct.pProfitMargin
+                maxObj = actProduct
+        return maxObj
 
 if __name__ == "__main__":
-    n = int(input())
-    productlist = []
-    activeproducts = []
-    for i in range(n):
-        pID = str(input()).lower()
+    noOfProducts = int(input())
+    listOfProducts = []
+    for i in range(noOfProducts):
+        pID = input()
         pCostPrice = float(input())
-        pSellingPrice = float(input()) 
-        pProfitMargin = float(((pSellingPrice-pCostPrice)/pCostPrice)*100)
-        pProfitMargin = round(pProfitMargin,2)
-        obj = Product(pID, pCostPrice, pSellingPrice, pProfitMargin)
-        productlist.append(obj)
-        activeproducts.append(obj.pProfitMargin)
-    activeIDs = list(map(str, input().split(" ")))
-    print(activeproducts)
-
-
-
-
+        pSellingPrice = float(input())
+        productObject = Product(pID, pCostPrice, pSellingPrice, 0.0)
+        listOfProducts.append(productObject)
+    
+    storeObj = Store("Walmart", listOfProducts, [])
+    activeIDs = list(input().lower().split(" "))
+    actPro = storeObj.setProduct(activeIDs)
+    if actPro == []:
+        print ("No product found with respectivr IDs.")
+    else:
+        for AP in actPro:
+            print (AP.pID, "\t", AP.pProfitMargin)
+    topPro = storeObj.topProduct()
+    if topPro is None:
+        print ("No products in Store.")
+    else:
+        print(topPro.pID, "\t", topPro.pProfitMargin)
