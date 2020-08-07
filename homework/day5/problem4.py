@@ -36,9 +36,3 @@ if __name__=='__main__':
     listOfBill=calculateBills(l)
     for i in listOfBill:
         print(i.mobileNumberB,i.paymentBill)
-        
-
-
-        
-
-
