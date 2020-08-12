@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>This is my first django app!</title>
+    </head>
+
+    <body>
+        {% if data is not None %}
+        <h2>Existing user data :</h2>
+        <ol>
+            {% for row in data %}
+                <li>Username: <b>{{ row.0 }}</b> Location: <b>{{ row.1 }}</b></li>
+            {% endfor %}
+        </ol>
+        {% else %}
+            <h1>No data.</h1>
+        {% endif %}
+    </body>
+</html>
+
+<style>
+    li {
+        color: green;
+    }
+    h2 {
+        color:blue;
+    }
+</style>
