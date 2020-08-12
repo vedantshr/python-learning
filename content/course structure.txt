@@ -4,8 +4,7 @@ DAY3:	Functions, Inbuilt Functions, Github. 22/7
 DAY4:	File I/O, CSV, Exception handling. 25/7
 DAY5:	Classes in detail.  29/7
 DAY6:   OOPS Continued. 2/8
-DAY7:	Module Development, Numpy, Scipy.	5/8
-DAY8:	APIs, Python for servers.	8/8
-DAY8.5: --
-DAY9:	Introduction to Web development basics. 10/8
-DAY10:	Developing an application with Django	13/8
+DAY7:	OOPS Continued	5/8
+DAY8:	Module Development, Numpy, Scipy. 8/8
+DAY9:	Introduction to Web development basics. 12/8
+DAY10:	Developing an application with Django	14/8

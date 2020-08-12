@@ -9,6 +9,7 @@ class Store:
         self.storename = storename
         self.address = address
         self.products = products
+
 if __name__ == "__main__":
     n = int(input())
     l = []

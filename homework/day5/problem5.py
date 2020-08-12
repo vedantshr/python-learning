@@ -11,25 +11,37 @@ class Store:
         self.products = products
     
     def totalProductionPriceForCategory(self, category):
+        totalPrice = 0
         for objects in self.products:
-            if category == objects.name:
-                return objects.price*objects.quantity
+            if category == objects.name.split("-")[0]:
+                totalPrice = totalPrice + (objects.price*objects.quantity)
+        return totalPrice
 
-    def checkProductAvailability(self, nameOfpro):
+    def checkProductAvailability(self, nameOfpros):
         dict1 = {}
-        for objects in self.products:
-            if nameOfpro == objects.name:
-                if objects.quantity > 0:
-                    status = "Available"
-                    dict1[objects.name] = status
-                    return dict1
-                elif object.quantity == 0:
-                    status = "Out of stock"
-                    dict1[objects.name] = status
-                    return dict1
-            else:
-                status = "Not Available"
-                dict1[nameOfpro] = status   
+        for product in nameOfpros:
+            for objects in self.products:
+                if product == objects.name:
+                    if objects.quantity > 0:
+                        status = "Available"
+                        dict1[objects.name] = status
+                        
+                    elif object.quantity == 0:
+                        status = "Out of stock"
+                        dict1[objects.name] = status
+        return dict1
+
+    def calculateBill(self, listOfProducts):
+        dict1 = self.checkProductAvailability(listOfProducts)
+        totalBill = 0
+        for products in dict1:
+            for objects in self.products:
+                if products == objects.name and dict1[products] == "Available":
+                    totalBill += objects.price
+        return totalBill
+                    
+
+                
 
 if __name__ == "__main__":
     noOfProducts = int(input())
@@ -44,11 +56,12 @@ if __name__ == "__main__":
     
     objStore = Store("General Store", "Paschim Vihar", products)
     category = input()
-    nameOfpro = input()    
+    nameOfpros = input().split(" ")
     catg = objStore.totalProductionPriceForCategory(category)
-    availability = objStore.checkProductAvailability(nameOfpro)
+    
+    bill = objStore.calculateBill(nameOfpros)
     print(catg) 
-    print(availability)
+    print(bill)
 
     
 

@@ -6,9 +6,8 @@ class Project:
         self.technologyList = technologyList
         self.avgProjCost = 0.0
     def calculateProjCost(self, ratePerManHour):
-        for objects in Projlist:
-            if nameOfProject == objects.projectId:
-                return objects.manHours*ratePerManHour
+        if nameOfProject == self.projectId:
+            return self.manHours*ratePerManHour
 
 
 class Organisation:
@@ -20,7 +19,7 @@ class Organisation:
         for objects in self.Projlist:
             if nameOfProject == objects.projectId:
                 # projCost = objects.manHours*ratePerManHour
-                objects.avgProjCost = (projcost/len(objects.technologyList))
+                objects.avgProjCost = (objects.calculateProjCost(ratePerManHour)/len(objects.technologyList))
                 return objects.avgProjCost
                 
 
@@ -38,9 +37,9 @@ if __name__ == "__main__":
     nameOfProject = int(input())
     ratePerManHour = float(input())
     obj2 = Organisation("ABC", Projlist)
-    projcost = obj.calculateProjCost(ratePerManHour)
+    # projcost = obj.calculateProjCost(ratePerManHour)
     averageCostOfProject = obj2.projAvgCostByTechnology(ratePerManHour)
-    print(projcost)
+    # print(projcost)
     print(averageCostOfProject)
     
         

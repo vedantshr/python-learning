@@ -5,13 +5,11 @@ class Student:
         self.sub2 = sub2
         self.sub3 = sub3
 
-    def calculateResult(self, nameOfStudent):
-        for objects in studentDict:
-            if nameOfStudent == objects.nameSt:
-                if objects.sub1 > 40 and objects.sub2 > 40 and objects.sub3 > 40:
-                    return (objects.sub1 + objects.sub2 + objects.sub3)/3
-                else:
-                    return 0
+    def calculateResult(self):
+        if self.sub1 > 40 and self.sub2 > 40 and self.sub3 > 40:
+            return (self.sub1 + self.sub2 + self.sub3)/3
+        else:
+            return 0
 
 class School:
     def __init__(self, name, studentDict):
@@ -20,21 +18,20 @@ class School:
 
     def getStudentResult(self):
         for objects in self.studentDict:
-            if avg > 60:
-                value = "Pass"
-                return value
+            if objects.calculateResult() > 60:
+                self.studentDict[objects] = "Pass"
             else:
-                value = "Fail"
-                return value
+                self.studentDict[objects] = "Fail"
+        return self.studentDict
 
-    def findStudentWithHighestMarks(self):
-        l = []
-        for objects in self.studentDict:
-            if (objects.sub1 + objects.sub2 + objects.sub3)/3 > 60:
-                l.append((objects.sub1 + objects.sub2 + objects.sub3)/3)
-        return [max(l)]
-
-
+    def findStudentWithHighestMarks(self, passed_students):
+        highest = 0
+        student_name = "No student Passed."
+        for obj in passed_students:
+            if highest < obj.calculateResult():
+                highest = obj.calculateResult()
+                student_name = obj.nameSt
+        return student_name, highest
 
 
 if __name__ == "__main__":
@@ -50,14 +47,16 @@ if __name__ == "__main__":
         obj = Student(nameSt, sub1, sub2, sub3)
         studentDict[obj] = value
 
-    nameOfStudent = input()
     obj2 = School("SMAPS", studentDict)
-    avg = obj.calculateResult(nameOfStudent)
     result = obj2.getStudentResult()
-    highestmarks = obj2.findStudentWithHighestMarks()
-    print(avg)
+    passed_students = []
+    for objects in result:
+        if result[objects] == "Pass":
+            passed_students.append(objects)
+    stu, highestmarks = obj2.findStudentWithHighestMarks(passed_students)
+    # print(avg)
     print(result)
-    print(highestmarks)
+    print(stu, highestmarks)
 
 
 
