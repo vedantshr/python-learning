@@ -1,0 +1,5 @@
+1. HTML and CSS basics.
+2. Intro to SQL.
+3. MVC vs MTV
+3. Intro to django.
+4. How to create application architecture.
