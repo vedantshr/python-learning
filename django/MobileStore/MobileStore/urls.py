@@ -17,5 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('application.urls')),
+    path('userinfo', include('application.urls')),
+    path('mobilestore', include('mobstore.urls')),
 ]
