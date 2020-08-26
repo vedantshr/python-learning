@@ -1,0 +1,83 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <title>Online Mobile Store </title>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <img src="https://sociotalks.blog/logo.PNG/">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Mobile Store</a>
+                      </div>
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="{% url 'home' %}">Search</a></li>
+                        <li><a href="{% url 'add' %}">Add</a></li>
+                        <li><a href="{% url 'delete' %}">Delete</a></li>
+                        <li class="active"><a href="{% url 'viewall' %}">View all</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+            </header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" allign="centre">
+                        {% for mobile in data %}
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>Name of the Event: {{ mobile.0 }}</li>
+                                    <li>Place of Event: {{ mobile.1 }}</li>
+                                    <li>Month: {{ mobile.2 }}</li>
+                                    <li>Year: {{ mobile.3 }}</li>
+                                    <li>Minimum Expenditure: {{ mobile.4 }}</li>
+                                    <li>Maximum Expenditure: {{ mobile.5 }}</li>
+                                    <li>Customer's Name: {{ mobile.6 }}</li>
+
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+                     
+            <footer class="container">
+                <!-- <div > -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-4">
+                                <a href="mailto:vedantsharma24052001@gmail.com">Mail Us</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="tel:8586063895">Call Us</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a>Mobile Store &copy;</a>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </footer>
+        </main>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+<style>
+    footer {
+        background-color: bisque;
+        position: fixed;
+        bottom:0;
+    }
+    footer div a {
+        color:blue;
+        font-size: 32px;
+    }
+    footer div a:hover {
+        transform:scale(1.2);
+        color:#ccc;
+    }
+</style>
