@@ -5,7 +5,7 @@ from .models import events
 # Create your views here.
 
 def index(request):
-    return render(request, "index.html", {'delete':False}, {'edit':False})
+    return render(request, "index.html", {'delete':False, 'edit':False})
 
 def search(request):
     customer_name_ip = request.POST.get('customer_name', '')

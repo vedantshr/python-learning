@@ -38,18 +38,13 @@
                 </form>
             {% endif %}
 
-            {% if edit == False %}
-                <form actio="{% url 'search' %}" method="POST">
-                    {% csrf_token %}
-                    <input name="customer_name" type="text" placeholder="Enter customer's name" required>
-                    <input type="submit" name="search" class="btn btn-primary">
-                </form>
-            {% else %}
+            {% if edit is True %}
                 <form action="{% url 'editpage' %}" method="POST">
                     {% csrf_token %}
                     <input name="customer_name" type="text" placeholder="Edit the customer's name" required>
-                    <input type="submit" name="edit" class="btn btn-primary">
+                    <input type="submit" name="edit" class="btn btn-primary" style="display:none">
                 </form>
+            
             {% endif %}
 
             <footer class="container">
