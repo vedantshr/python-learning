@@ -12,7 +12,7 @@
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
                       <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Mobile Store</a>
+                        <a class="navbar-brand" href="#"><Em>Event Manager</Em></a>
                       </div>
                       <ul class="nav navbar-nav">
                         <li class="active"><a href="{% url 'home' %}">Search</a></li>
@@ -27,16 +27,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12" allign="centre">
-                        {% for mobile in data %}
+                        {% for events in data %}
                             <div class="col-md-4">
                                 <ul>
-                                    <li>Name of the Event: {{ event.0 }}</li>
-                                    <li>Place of Event: {{ event.1 }}</li>
-                                    <li>Month: {{ event.2 }}</li>
-                                    <li>Year: {{ event.3 }}</li>
-                                    <li>Minimum Expenditure: {{ event.4 }}</li>
-                                    <li>Maximum Expenditure: {{ event.5 }}</li>
-                                    <li>Customer's Name: {{ event.6 }}</li>
+                                    <li>Name of the Event: {{ events.0 }}</li>
+                                    <li>Place of Event: {{ events.1 }}</li>
+                                    <li>Month: {{ events.2 }}</li>
+                                    <li>Year: {{ events.3 }}</li>
+                                    <li>Minimum Expenditure: {{ events.4 }}</li>
+                                    <li>Maximum Expenditure: {{ events.5 }}</li>
+                                    <li>Customer's Name: {{ events.6 }}</li>
 
                                 </ul>
                             </div>
@@ -56,7 +56,7 @@
                                 <a href="tel:8586063895">Call Us</a>
                             </div>
                             <div class="col-md-4">
-                                <a>Mobile Store &copy;</a>
+                                <a>Event Manager &copy;</a>
                             </div>
                         </div>
                     </div>
