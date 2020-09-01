@@ -41,7 +41,7 @@ def deletepage(request):
 
     try:
         query = events.objects.get(customerName_db=customer_name_ip)
-        mobileDetails = [query.name_db,query.place_db,query.month_db,query.year_db,query.startingPrice_db,query.maximumPrice_db,query.customerName_db]
+        eventsDetails = [query.name_db,query.place_db,query.month_db,query.year_db,query.startingPrice_db,query.maximumPrice_db,query.customerName_db]
         return render(request, "single.html", {"data":eventsDetails, 'delete':True})
 
     except:
@@ -53,9 +53,9 @@ def deleteentry(request):
     try:
         query = events.objects.get(customerName_db=customer_name_ip)
         query.delete()
-        return render(request, "single.html", {'delete':False})
+        return render(request, "index.html", {'delete':False})
     except:
-        return HttpResponse("Customer doesn't exist.")
+        return HttpResponse("Customer does not exist.")
 
 def viewall(request):
     try:
