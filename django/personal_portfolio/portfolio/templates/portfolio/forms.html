@@ -1,0 +1,136 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+<style>
+    h1 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+    img {display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    }
+    
+    
+</style>
+<style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .bg-image {
+      /* The image used */
+      background-image: url("https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg");
+      
+      /* Add the blur effect */
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+      
+      /* Full height */
+      height: 100%; 
+      
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    /* Position text in the middle of the page/image */
+    .bg-text {
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+    }
+    </style>
+    </head>
+    <body>
+
+        <!-- <div class="bg-image"></div> -->
+
+<div class="bg-text">
+    <div class="container">
+        <div class="verticle-center">
+            <h1><p style="color: rgb(218, 221, 19);">Login</p></h1>
+            
+            <form action="" method="post">
+                <label>Email</label><br>
+                <input type="email" name="email" placeholder="email"><br><br>
+                <label>Password</label><br>
+                <input type="password" name="password" placeholder="password"><br><br>
+                <input type="submit" value="LOGIN"><br><br>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="verticle-center">
+            <form action="/new">
+            <label>New Here?</label>
+            <!-- <input value="Register" type="submit"> -->
+            <button type="button" class="btn btn-success"><a href="{% url 'register:register' %}"><p style="color:cornsilk">Register</p></a></button>
+            </form>
+        </div>
+    </div>
+    <!-- <h1>About Page</h1> -->
+  <!-- <h1 style="font-size:50px">I am John Doe</h1> -->
+  <!-- <p>I'm a Student.</p> -->
+</div>
+</body>
+
+<!-- <div class="container">
+    <div class="verticle-center">
+        <h1><p style="color: darkgreen;">Login</p></h1>
+        
+        <form action="" method="post">
+            <label>Email</label><br>
+            <input type="email" name="email" placeholder="email"><br><br>
+            <label>Password</label><br>
+            <input type="password" name="password" placeholder="password"><br><br>
+            <input type="submit" value="LOGIN"><br><br>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="verticle-center">
+        <form action="/new">
+        <label>New Here?</label>
+        <input value="Register" type="submit">
+        <button type="button" class="btn btn-success"><a href="{% url 'register:register' %}"><p style="color:cornsilk">Register</p></a></button>
+        </form>
+    </div>
+</div> -->
+
+
+{% endblock %}
+
+
+<!-- <form> -->
+<!-- <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> -->

@@ -1,0 +1,22 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+<style>
+    h1 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+    
+</style>
+<div class="container">
+    <div class="vertical-center">
+        <h1>{{ project.title }}</h1>
+
+<!-- <h5>{{ project.date|date:'F jS Y' }}</h5> -->
+
+<p><h5>{{ project.description|safe }}</h5></p>
+<a href="{% url 'projectdetail' %}">Back</a>
+    </div>
+</div>
+
+
+
+{% endblock %}

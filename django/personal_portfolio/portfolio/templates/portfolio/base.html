@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <title>Quarantined Talks</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="vertical-center">
+        <!-- <div id="logo">
+					<a href="{% url 'home' %}"><img src="data:image/jpeg;base64,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" style="width: 100px" alt="" title="" /></a>
+				</div> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">  
+          <a class="navbar-brand" href="{% url 'home' %}"><img src="https://mb.cision.com/Public/5019/9406535/b642ecfd7ae7d948_org.jpg" style="width: 100px" alt="" title="" /></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <a class="navbar-brand" href="{% url 'home' %}"><h3>Quarantine Talks &#9830;</h3></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'register:register' %}">Register <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Content
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'blog:all_blogs' %}">Poems</a>
+                  <a class="dropdown-item" href="{% url 'projectdetail' %}">Blogs</a>
+                  <!-- <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Disabled</a> -->
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'forms' %}" tabindex="-1" aria-disabled="true">Login</a>
+              </li>
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+          </div>
+        </nav>
+      </div>
+    </div>
+    
+      
+      <div class="bg-image"></div>
+      
+      <!-- <div class="bg-text">
+        <h2>Blurred Background</h2>
+        <h1 style="font-size:50px"><p style="color: darkslateblue;">"A blogger can bring to light many obscure and unexplored facts of the issues they are going to write on."</p></h1>
+        <p></p> 
+      </div> -->
+      
+    
+{% block content %}{% endblock %}      
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+    <br>
+
+    
+	
+  
+  </body>
+</html>
+<style>
+  /* .all-browsers {
+    margin: 0;
+    padding: 5px;
+    background-color: lightgray;
+  }
+  
+  .all-browsers > h1, .browser {
+    margin: 10px;
+    padding: 5px;
+  }
+  
+  .browser {
+    background: white;
+  }
+  
+  .browser > h2, p {
+    margin: 4px;
+    font-size: 90%;
+  } */
+  
+  footer {
+    text-align: center;
+    padding: 5px;
+    background-color: DarkSalmon;
+    color: white;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <!-- <h1>The article and footer elements + CSS</h1>
+  
+  <article class="all-browsers">
+    <h1>Most Popular Browsers</h1>
+    <article class="browser">
+      <h2>Google Chrome</h2>
+      <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+    </article>
+    <article class="browser">
+      <h2>Mozilla Firefox</h2>
+      <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+    </article>
+    <article class="browser">
+      <h2>Microsoft Edge</h2>
+      <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+    </article>
+  </article> -->
+  
+  <footer>
+    <p>Author: Vedant Sharma<br>
+    <a href="mailto:vedantsharma24052001@gmail.com">vedantsharma24052001@gmail.com</a></p>
+  </footer>
+  
+  </body>
+  </html>
+  

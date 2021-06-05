@@ -1,0 +1,114 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+<style>
+    h1 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+    img {display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    }
+    
+    
+</style>
+
+<style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .bg-image {
+      /* The image used */
+      background-image: url("https://img.freepik.com/free-photo/wall-wallpaper-concrete-colored-painted-textured-concept_53876-31799.jpg?size=626&ext=jpg");
+      
+      /* Add the blur effect */
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+      
+      /* Full height */
+      height: 100%; 
+      
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    /* Position text in the middle of the page/image */
+    .bg-text {
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+    }
+    </style>
+    </head>
+    <body>
+
+        <!-- <div class="bg-image"></div> -->
+
+<div class="bg-text">
+    <div class="container">
+        <div class="vertical-center">
+            <form action="register" method="post">
+                {% csrf_token %}
+                <label>Username</label><br>
+                <input type="text" name="username" placeholder="username"><br><br>
+                <label>Email</label><br>
+                <input type="email" name="email" placeholder="email"><br><br>
+                <label>Password</label><br>
+                <input type="password" name="password" placeholder="password"><br><br>
+                <input type="submit" value="CREATE USER">
+    
+    
+    
+    
+            </form>
+            <div>
+                {% for message in messages %}
+                <h3> {{ messages }} </h3>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- <h1>About Page</h1> -->
+  <!-- <h1 style="font-size:50px">I am John Doe</h1> -->
+  <!-- <p>I'm a Student.</p> -->
+</div>
+</body>
+
+<!-- <div class="container">
+    <div class="vertical-center">
+        <form action="register" method="post">
+            {% csrf_token %}
+            <label>Username</label><br>
+            <input type="text" name="username" placeholder="username"><br><br>
+            <label>Email</label><br>
+            <input type="email" name="email" placeholder="email"><br><br>
+            <label>Password</label><br>
+            <input type="password" name="password" placeholder="password"><br><br>
+            <input type="submit" value="CREATE USER">
+
+
+
+
+        </form>
+    </div>
+</div> -->
+{% endblock %}
