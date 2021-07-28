@@ -16,9 +16,9 @@ def projectdetail(request):
     projects = Project.objects.all()
     return render(request, 'portfolio/projectdetail.html', {'projects':projects})
 
-def forms(request):
+# def forms(request):
 
-    return render(request, 'portfolio/forms.html')
+#     return render(request, 'portfolio/forms.html')
 
 def projectinfo(request, project_id):
     # projects = get_object_or_404(Project, pk=project_id)

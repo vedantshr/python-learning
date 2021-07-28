@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!-- <head>
+    <style>
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        img {display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        }
+    </style>
+</head>
+{% for project in projects %}
+<div class="container">
+    <div class="vertical-center">
+        <h1><p style="color:red">{{ project.title }}</p></h1>
+<img src="{{ project.image.url }}" height=500 width=500>
+<hr>
+<p>{{ project.description|safe }}</p>
+<p>&#9830;</p>
+    </div>
+</div>
+{% endfor %} -->
+<body class="homepage is-preload">
+    <div id="page-wrapper">
+        <div class="wrapper style2">
+        
+            <article id="main" class="container special"><p><br><br></p>
+            <a href="#" class="image featured"><img src="https://media.istockphoto.com/photos/dubai-downtown-skyline-on-a-foggy-winter-day-picture-id1163368823?k=6&m=1163368823&s=612x612&w=0&h=VuIWFpLH6pUgq7-qGAwwU7p3NcLhw2xZoSA3tMZLcOE=" alt="" /></a>
+            <header>
+                <h2><a href="#">Why Dubai?</a></h2>
+                <!-- <p>
+                Sociis aenean eu aenean mollis mollis facilisis primis ornare penatibus aenean. Cursus ac enim
+                pulvinar curabitur morbi convallis. Lectus malesuada sed fermentum dolore amet.
+                </p> -->
+            </header>
+            <br>
+            <p>
+                Located on the eastern coast of the Arabic Peninsula, Dubai is popularly known for its world-class infrastructure, high-tech facilities, and extravagant luxuries. 
+                If that doesn’t sound convincing enough to buy a property in Dubai, its strategic location, open economic policies, and efficient real estate laws are sure to blow your mind.
+                Read on to know why Dubai is often an investor’s first choice to buy a property and invest therein. Is it the city’s old-world charm or the string of modern skyscrapers that lure the investors? 
+                Here’s why people love to invest in Dubai, and you should too.
+            </p>
+            <footer>
+                <a href="{% url 'projectinfo' %}" class="button">Continue Reading</a>
+            </footer>
+            </article>
+
+        </div>
+
+        <!-- Features -->
+        <div class="wrapper style1">
+
+            <section id="features" class="container special">
+            <header>
+                <h2>Reasons why you must invest in Dubai</h2>
+                <p>Some key factors that can't be ignored!!!!</p>
+            </header>
+            <br>
+            <div class="row">
+                <article class="col-4 col-12-mobile special">
+                <a href="#" class="image featured"><img src="https://www.travelvui.com/wp-content/uploads/2016/10/best-money-changer-dubai-860x549.jpg" alt="" /></a>
+                <header>
+                    <h3>Currency Appreciation</h3>
+                </header>
+                <p>
+                    The US dollar holds the strongest economic position. Investing in Dubai is equivalent to investing in US dollars as the exchange rate between the US dollar and Dubai’s AED is fixed. It doesn’t fluctuate.
+                </p>
+                </article>
+                <article class="col-4 col-12-mobile special">
+                <a href="#" class="image featured"><img src="https://www.emiratesloan.info/blog/wp-content/uploads/2018/09/Mortgage-Loan-in-UAE-1.jpg" alt="" /></a>
+                <header>
+                    <h3><a href="#">Guaranteed Home Loans</a></h3>
+                </header>
+                <p>
+                    If you’re looking forward to investing in a property in Dubai, you can opt for a home loan which is guaranteed with no paperwork involved. 
+                    This loan is generally available at around 3-4%. So, even if you rent out your property after taking a loan, you can make money with the bank’s money. 
+                    That’s the beauty of investing in a property in Dubai.
+                </p>
+                </article>
+                <article class="col-4 col-12-mobile special">
+                <a href="#" class="image featured"><img src="https://www.qtaxservices.com/uploads/1/2/5/4/125418089/dubai-tax-free_2_orig.jpg" alt="" /></a>
+                <header>
+                    <h3><a href="#">0% Tax</a></h3>
+                </header>
+                <p>
+                    If you invest in Dubai, you not only get a higher rental, but there is no income tax also on the rental income you earn. 
+                    This surely is like a cherry on the cake. No wonder Dubai is a hub for global investors!
+                </p>
+                </article>
+            </div>
+            </section>
+
+        </div>
+    </div>
+</body>
+
+
+{% endblock %}

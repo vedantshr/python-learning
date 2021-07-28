@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<body class="homepage is-preload">
+    <div id="page-wrapper">
+
+      <!-- Header -->
+        <div id="header">
+
+          <!-- Inner -->
+            <div class="inner">
+              <header>
+                <h1><a href="{% url 'home' %}" id="logo"><img src="https://i.pinimg.com/originals/cc/f5/7e/ccf57e74ac5b1c4c0a38e79a32a8ab18.png" alt="" width="300" height="80"></a></h1>
+                <hr />
+                <p>Helping you find your dream house in Dubai</p>
+              </header>
+              <footer>
+                <a href="#banner" class="button circled scrolly">Explore</a>
+              </footer>
+            </div>
+        </div>
+        <section id="banner">
+            <article id="main" class="container special"><p><br><br></p>
+                <header>
+                <h2>Hi. Welcome to <strong>Adeline</strong>.</h2>
+                <p><img src="https://images.unsplash.com/photo-1544092683-c0c9ebb368e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGR1YmFpfGVufDB8fDB8fA%3D%3D&w=1000&q=80" class="center" width="" height=""><br>
+                    Hiring trained personnel takes all the stress of managing your property away and leave you to reap the benefits of your beloved asset. 
+                    Now no more hassle of dealing with the tenants, registering contracts, or worrying about rent collection!
+                    <br>
+                    Property Managers in Dubai are authorized by the Dubai Land Department to take rent in their accounts. 
+                    On behalf of Global investors, they take cheques into their bank account to ultimately remit the amount to their clients.
+                    <br>
+                    Adeline is pleased to announce that it has joined hands with the top property management<br> companies to provide its clients with the best property management services. 
+                    Here are<br> the top property management services that we offer to our clients from across the world.
+                </p>
+                <footer>
+                    <a href="{% url 'about' %}" class="button">Continue Reading</a>
+                </footer>
+                <style>
+                    .center {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 50%;
+                        }
+
+                    /* .container special {
+                        width: 50%;
+                        height: 1000px;
+                        overflow: hidden;
+                    }
+
+                    .container img {
+                        max-width: 100%;
+                        height: auto;
+                        display: block;
+                    } */
+                </style>
+                </header>
+            </article>
+          </section>
+    </div>
+</body>
+
+{% endblock %}

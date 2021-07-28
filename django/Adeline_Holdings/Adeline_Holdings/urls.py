@@ -1,4 +1,4 @@
-"""personal_portfolio URL Configuration
+"""Adeline_Holdings URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -14,21 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from portfolio import views
+from Holdings import views
 
-urlpatterns = [   
+urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('blog/', include('blog.urls')),
     path('about', views.about, name="about"),
-    path('projectdetail', views.projectdetail, name="projectdetail")
-    # path('forms', views.forms, name="forms"),
-    # path('register/', include('register.urls')),
-    # path('<int:project_id>/', views.projectinfo, name="projectinfo"),
-    
+    path('contact', views.contact, name="contact"),
+    path('projectdetail', views.projectdetail, name="projectdetail"),
+    path('projectinfo', views.projectinfo, name="projectinfo"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
